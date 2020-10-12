@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="服装网购系统.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>母版页</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header style="height: 80px;width:100%;background-color:darkcyan; background-image: url('/resource/master/header_background.jpg');">                                 
+                        <table id="header" style="width:100%;height:60px;margin-top:10px">
+                            <tr>
+                                <td>
+                                    <asp:Image ID="logo" runat="server" Width="100px" Height="33px" ImageUrl="~/resource/master/logo.jpg" />
+                                </td>
+                                <td>
+                                    <asp:Label ID="Label1" runat="server" Text="你还未登陆" Font-Bold="True" Font-Size="Medium" ForeColor="#FF0066"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Button ID="Button1" runat="server" Text="登录" PostBackUrl="~/login.aspx" BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="Button2" runat="server" Text="注册" PostBackUrl="~/logon.aspx" BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="Button3" runat="server" Text="购物车" PostBackUrl="~/cart.aspx" BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="Button4" runat="server" Text="个人中心" PostBackUrl="~/personal.aspx" BackColor="#FF0066" Font-Bold="True" ForeColor="White" />
+                                </td>
+                            </tr>
+                        </table>
+                                    
+                </header>
+            <div style="height:60px;background-color:aquamarine">
+                <table style="width:100%;margin-top:20px">
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button5" runat="server" Text="主页" PostBackUrl="~/mainform.aspx" BackColor="#FFFF66" Font-Bold="True" ForeColor="#6666FF" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button6" runat="server" Text="衣服" PostBackUrl="~/yifu.aspx" BackColor="#FFFF66" Font-Bold="True" ForeColor="#6666FF" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button7" runat="server" Text="裤子" PostBackUrl="~/kuzi.aspx" BackColor="#FFFF66" Font-Bold="True" ForeColor="#6666FF" />
+                        </td>
+                        <td>
+                            <asp:Button ID="Button8" runat="server" Text="鞋类" PostBackUrl="~/xie.aspx" BackColor="#FFFF66" Font-Bold="True" ForeColor="#6666FF" />
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:Button ID="Button9" runat="server" Text="搜索" OnClick="Button9_Click" BackColor="#FF99CC" Font-Bold="True" ForeColor="#CCCCFF" />
+
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/resource/master/guanggao.jpg" />
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer style="height:80px; background-image: url('/resource/master/footer.jpg');">
+            <div style="text-align:center;margin-top:20px">
+            <asp:LinkButton ID="LinkButton1" runat="server" BorderStyle="Groove" BorderColor="#9900CC" Font-Bold="True" Font-Italic="False" Font-Size="Large" ForeColor="Blue">关于我们</asp:LinkButton>
+              </div>
+        </footer>
+    </form>
+</body>
+</html>
